@@ -6,6 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Favicon Image -->
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'css/all.css' %}">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom -->
@@ -14,9 +18,13 @@
 </head>
 
 <body>
+  <!-- Topbar -->
+  {% include 'partials/_topbar.html' %}
+
   <!-- NavBar -->
   {% include 'partials/_navbar.html' %}
 
+  <!-- Main page content block -->
   {% block content %} {% endblock %}
 
   <!-- Footer -->
