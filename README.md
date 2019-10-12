@@ -2,9 +2,7 @@
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 
-One or two paragraphs providing an overview of your project.
-
-Essentially, this part is your sales pitch.
+BookIt!  The online books store for book lovers across the world.  Esencially, 
  
 ## UX
  
