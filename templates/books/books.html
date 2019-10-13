@@ -1,6 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
   <h1>All Books</h1>
+  <div class="card p-4 mt-4 mb-4 search-card">
+  <h2>Search</h2>  
+    <form action="" form-group>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="Search Title">search title</label>
+          <input type="text" name="search" id="" class="form-control">
+        </div>
+        <div class="col-md-4">
+          <label for="Search Author">search author</label>
+          <input type="text" name="search" id="" class="form-control">
+        </div> 
+        <div class="col-md-4">
+          <label for="Search Price">search price</label>
+          <input type="text" name="search" id="" class="form-control">
+        </div>      
+      </div>
+    </form>    
+  </div>
   <div class="row mt-4 mb-4">
     <!-- Book 1 -->
     <div class="col-md-4">
@@ -9,7 +28,7 @@
           alt="">
         <h5>Pillars of the Earth</h3>
           <p>Ken Follet</p>
-          <button class="btn btn-custom btn-sm mb-4">More Info</button>
+          <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
       </div>
     </div>
     <!-- Book 2 -->
@@ -19,7 +38,7 @@
           alt="">
         <h5>Pillars of the Earth</h3>
           <p>Ken Follet</p>
-          <button class="btn btn-custom btn-sm mb-4">More Info</button>
+          <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
       </div>
     </div>
     <!-- Book 3 -->
@@ -28,7 +47,7 @@
           <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/book-images/pillars-of-the-earth.jpg" alt="">
           <h5>Pillars of the Earth</h3>
             <p>Ken Follet</p>
-            <button class="btn btn-custom btn-sm mb-4">More Info</button>
+            <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
         </div>
       </div>    
   </div>
@@ -40,7 +59,7 @@
             alt="">
           <h5>Pillars of the Earth</h3>
             <p>Ken Follet</p>
-            <button class="btn btn-custom btn-sm mb-4">More Info</button>
+            <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
         </div>
       </div>
       <!-- Book 5 -->
@@ -50,7 +69,7 @@
             alt="">
           <h5>Pillars of the Earth</h3>
             <p>Ken Follet</p>
-            <button class="btn btn-custom btn-sm mb-4">More Info</button>
+            <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
         </div>
       </div>
       <!-- Book 6 -->
@@ -59,7 +78,7 @@
             <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/book-images/pillars-of-the-earth.jpg" alt="">
             <h5>Pillars of the Earth</h3>
               <p>Ken Follet</p>
-              <button class="btn btn-custom btn-sm mb-4">More Info</button>
+              <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
           </div>
         </div>    
     </div>

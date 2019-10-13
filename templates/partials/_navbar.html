@@ -18,7 +18,7 @@
             class="nav-item mr-3"
           {% endif %}
         >
-          <a class="nav-link" href="{% url 'index' %}">Home</a>
+          <a class="nav-link" href="{% url 'index' %}"><i class="fas fa-home"></i> Home</a>
         </li>
         <li
           {% if 'about' in request.path %}
@@ -36,7 +36,7 @@
             class="nav-item mr-3"
           {% endif %}
         >
-          <a class="nav-link" href="{% url 'books' %}">Books</a>
+          <a class="nav-link" href="{% url 'books' %}"><i class="fas fa-book-reader"></i> Books</a>
         </li>
         <li class="nav-item mr-3">
           <a class="nav-link" href="register.html">

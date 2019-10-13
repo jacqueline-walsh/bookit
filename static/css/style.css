@@ -217,3 +217,10 @@ div.header-image {
 .author-description {
 	padding: 10px;
 }
+
+/* ************************************ ALL BOOKS PAGE ************************************ */
+
+.search-card {
+	background-color: #ccc;
+	padding: 20px;
+}
