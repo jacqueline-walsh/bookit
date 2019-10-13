@@ -26,20 +26,16 @@
       <div class="col-md-4">
         <div class="card mb-4">
           <h4 class="text-center">Author of the Month</h4>
-          <h6 class="author-title text-center">JK Rowlings</h6>
-          <img class="author-image" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/authors/jkrowling.jpg" alt="JK Rowling">
-          <br/>
-          <div class="author-description">
-            <p>
-              Joanne Rowling was born on 31st July 1965 at Yate General Hospital near Bristol, and grew up in Gloucestershire in England and in Chepstow, Gwent, in south-east Wales.
-            </p>
-            <p>
-              Her father, Peter, was an aircraft engineer at the Rolls Royce factory in Bristol and her mother, Anne, was a science technician in the Chemistry department at Wyedean Comprehensive, where Jo herself went to school. Anne was diagnosed with multiple sclerosis when Jo was a teenager and died in 1990, before the Harry Potter books were published.  Jo also has a younger sister, Di.
-            </p>
-            <p>
-              The young Jo grew up surrounded by books. “I lived for books,’’ she has said. “I was your basic common-or-garden bookworm, complete with freckles and National Health spectacles.”
-            </p>
-          </div>
+          {% if is_author_of_month %}
+            {% for author_of_month in is_author_of_month %}
+              <h6 class="author-title text-center">{{ author_of_month.name }}</h6>
+              <img class="author-image" src=" {{ author_of_month.photo.url }}" alt="JK Rowling">
+              <br/>
+              <div class="author-description">
+                <p>{{ author_of_month.description }}</p>
+              </div>
+            {% endfor %}
+          {% endif %}
         </div>
       </div>
     </div>

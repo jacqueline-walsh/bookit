@@ -1,8 +1,16 @@
 from django.shortcuts import render
+from books.models import Books
+from authors.models import Author
 
 # Create homepage
 def index(request):
-  return render(request, 'pages/index.html')
+  books = Books.objects.filter(is_published=True).order_by('-list_date')
+  context = {'books': books}
+  return render(request, 'pages/index.html', context)
 
 def about(request):
-  return render(request, 'pages/about.html')
+  authors = Author.objects.all()
+  # get mvp
+  is_author_of_month = Author.objects.all().filter(is_author_of_month=True) 
+  context = {'authors' : authors, 'is_author_of_month': is_author_of_month }
+  return render(request, 'pages/about.html', context)
