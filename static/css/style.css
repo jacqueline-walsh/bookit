@@ -203,3 +203,17 @@ div.header-image {
 #main-footer {
   background-color: #009688;  
 }
+
+/* ************************************ ABOUT PAGE ************************************ */
+
+/* Author of the Monthg */
+
+.author-image {
+	border-radius: 50%;
+	width: 60%;
+	margin: 20px auto;
+}
+
+.author-description {
+	padding: 10px;
+}

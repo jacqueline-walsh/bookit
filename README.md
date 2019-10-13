@@ -2,7 +2,7 @@
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 
-BookIt!  The online books store for book lovers across the world.  Esencially, 
+BookIt!  The online books store for book lovers across the world.  
  
 ## UX
  
