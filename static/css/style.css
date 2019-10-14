@@ -224,3 +224,15 @@ div.header-image {
 	background-color: #ccc;
 	padding: 20px;
 }
+
+/* Pagination */
+.page-link {
+	color: #FF9800;
+}
+
+.page-item.active .page-link {
+	z-index: 1;
+	color: #fff;
+	background-color: #FF9800;
+	border-color: #FF9800;
+}

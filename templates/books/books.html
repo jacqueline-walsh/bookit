@@ -2,7 +2,7 @@
 <div class="container mt-4">
   <h3 class="mt-4">All Books</h3>
   <div class="card p-4 mt-4 mb-4 search-card">
-  <h4>Search</h4>  
+    <h4>Search</h4>
     <form action="" form-group>
       <div class="row">
         <div class="col-md-4">
@@ -12,75 +12,69 @@
         <div class="col-md-4">
           <label for="Search Author">search author</label>
           <input type="text" name="search" id="" class="form-control">
-        </div> 
+        </div>
         <div class="col-md-4">
           <label for="Search Price">search category</label>
           <input type="text" name="search" id="" class="form-control">
-        </div>      
+        </div>
       </div>
-    </form>    
+    </form>
   </div>
-  <div class="row mt-4 mb-4">
-    <!-- Book 1 -->
-    <div class="col-md-4">
-      <div class="card text-center">
-        <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/book-images/pillars-of-the-earth.jpg"
-          alt="">
-        <h5>Pillars of the Earth</h3>
-          <p>Ken Follet</p>
-          <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
-      </div>
-    </div>
-    <!-- Book 2 -->
-    <div class="col-md-4">
-      <div class="card text-center">
-        <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/slider-carousel/date-night.jpg"
-          alt="">
-        <h5>Date Night</h3>
-          <p>Samantha Hayes</p>
-          <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
-      </div>
-    </div>
-    <!-- Book 3 -->
-    <div class="col-md-4">
+
+  <!-- Books -->
+  <div class="container mt-4">
+    <div class="row mt-4 mb-4">
+      {% if books %} {% for book in books %}
+      <div class="col-md-4 mt-4">
         <div class="card text-center">
-          <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/slider-carousel/death-in-a-deck-chair.jpg" alt="">
-          <h5>Death in a Deck Chair</h3>
-            <p>Georgia Kains</p>
+          <img class="card-img-top" src="{{ book.photo_main.url }}" alt="">
+          <h5>{{ book.title }}</h3>
+            <p>{{ book.author }}</p>
             <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
         </div>
-      </div>    
+      </div>
+      {% endfor %} {% else %}
+      <p>There are no books available!</p>
+      {% endif %}
+    </div>
   </div>
-  <!-- Book 4 -->
-  <div class="row mt-2 mb-4">
-      <div class="col-md-4">
-        <div class="card text-center">
-          <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/slider-carousel/steve-jobs-autobiography.jpg"
-            alt="">
-          <h5>Steve Jobs Autobiography</h3>
-            <p>Walter Isaacson</p>
-            <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
-        </div>
+  <!-- pagination -->
+  <div class="row mb-4">
+      <div class="col-md-12">
+        {% if books.has_other_pages %}
+          <ul class="pagination">
+            {% if books.has_previous %}
+              <li class="page-item">
+                <a href="?page={{ books.previous_page_number }}" class="page-link">&laquo;</a>
+              </li>
+            {% else %}
+              <li class="page-item disabled">
+                <a class="page-link">&laquo;</a>
+              </li>
+            {% endif %}
+            {% for i in books.paginator.page_range %}
+              {% if books.number == i %}
+                <li class="page-item active">
+                  <a class="page-link">{{i}}</a>
+                </li>
+              {% else %}
+                <li class="page-item">
+                  <a href="?page={{i}}" class="page-link">{{i}}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+            {% if books.has_next %}
+            <li class="page-item">
+              <a href="?page={{ books.next_page_number }}" class="page-link">&raquo;</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <a class="page-link">&raquo;</a>
+            </li>
+          {% endif %}        
+          </ul>
+        {% endif %}
       </div>
-      <!-- Book 5 -->
-      <div class="col-md-4">
-        <div class="card text-center">
-          <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/slider-carousel/tattooist-of-auschwitz.jpg"
-            alt="">
-          <h5>Tattoist of Auschwitz</h3>
-            <p>Heather Morris</p>
-            <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
-        </div>
-      </div>
-      <!-- Book 6 -->
-      <div class="col-md-4">
-          <div class="card text-center">
-            <img class="card-img-top" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/slider-carousel/the-shape-of-water.jpg" alt="">
-            <h5>The Shape of Water</h3>
-              <p>Andrea Camilleri</p>
-              <a href="#" class="btn btn-custom btn-sm mb-4">More Info</a>
-          </div>
-        </div>    
     </div>
 </div>
 {% endblock %}
