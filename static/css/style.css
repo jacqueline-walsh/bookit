@@ -61,6 +61,11 @@ a.nav-link {
   transform: rotate(-15deg);
 }
 
+.footer-img {
+	width: 50px;
+	margin-bottom: 10px;
+}
+
 
 /* ************************************ HOME PAGE ************************************ */
 
