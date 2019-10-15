@@ -27,7 +27,7 @@
       {% if books %} {% for book in books %}
       <div class="col-md-4 mt-4">
         <div class="card text-center">
-          <img class="card-img-top" src="{{ book.photo_main.url }}" alt="">
+          <a href="{% url 'book' book.id %}" ><img class="card-img-top" src="{{ book.photo_main.url }}" alt="{{ book.title }} cover"></a>
           <h5>{{ book.title }}</h3>
             <p>{{ book.author }}</p>
             <a href="{% url 'book' book.id %}" class="btn btn-custom btn-sm mb-4">More Info</a>

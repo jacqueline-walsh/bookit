@@ -4,43 +4,43 @@
   <!-- Book -->
   <div class="row mt-4 mb-4">
     <div class="col-md-4 mt-4">
-      <img class="book--cover-image" src="{{ book.photo_main.url }}" alt="">
+      <img class="book--cover-image" src="{{ book.photo_main.url }}" alt="{{ book.title }} cover">
       <!-- Thumbnails -->
       <div class="row mb-5 thumbs">
         {% if book.photo_1 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_1.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_1.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_1.url }}" alt="{{ book.title }} page 1" class="img-fluid">
           </a>
         </div>
         {% endif %} {% if book.photo_1 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_2.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_2.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_2.url }}" alt="{{ book.title }} page 2" class="img-fluid">
           </a>
         </div>
         {% endif %} {% if book.photo_3 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_3.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_3.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_3.url }}" alt="{{ book.title }} page 3" class="img-fluid">
           </a>
         </div>
         {% endif %} {% if book.photo_4 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_4.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_4.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_4.url }}" alt="{{ book.title }} page 4" class="img-fluid">
           </a>
         </div>
         {% endif %} {% if book.photo_5 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_5.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_5.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_5.url }}" alt="{{ book.title }} page 5" class="img-fluid">
           </a>
         </div>
         {% endif %} {% if book.photo_6 %}
         <div class="col-md-2 thumb-img">
           <a href="{{ book.photo_6.url }}" data-lightbox="book-images">
-            <img src="{{ book.photo_6.url }}" alt="" class="img-fluid">
+            <img src="{{ book.photo_6.url }}" alt="{{ book.title }} cover page 6" class="img-fluid">
           </a>
         </div>
         {% endif %}
@@ -54,7 +54,7 @@
         <strong>category:</strong> {{ book.category_name }}</p>
       <p>
         <strong>author:</strong> {{ book.author }}</p>
-      <img class="book-author-image" src="{{ book.author.photo.url }}" alt="">
+      <img class="book-author-image" src="{{ book.author.photo.url }}" alt="{{ book.author }} image">
       <p>{{ book.author.description }}</p>
     </div>
   </div>
