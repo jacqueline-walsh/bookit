@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from books.models import Books
+from authors.models import Author
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
 # Create your views here.
@@ -15,4 +16,12 @@ def books(request):
 
 # return a single book
 def book(request, book_id):
-  return render(request, 'books/book.html')
+  book = get_object_or_404(Books, pk=book_id)
+  authors = book.author
+  author = Author.objects.all().filter(name=True)
+  context = {'book': book, 'author': 'author'}
+  return render(request, 'books/book.html', context)
+
+# search
+def search(request):
+  return render(request, 'books/search.html')

@@ -236,3 +236,24 @@ div.header-image {
 	background-color: #FF9800;
 	border-color: #FF9800;
 }
+
+/* ************************************ SINGLE BOOK PAGE ************************************ */
+
+.book--cover-image {
+	width: 100%;
+}
+
+.row.mb-5.thumbs {
+	margin-left: 10px;
+}
+
+.thumb-img {
+	padding: 0;
+	margin: 10px 2px;
+	border: 1px solid #666;
+}
+
+.book-author-image {
+	width: 15%;
+	border-radius: 5px;
+}

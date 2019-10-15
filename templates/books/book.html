@@ -1,4 +1,62 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
-  <h1>Single Book</h1>
+  <h4 class="mt-4 pt-4">{{ book.title }}</h4>
+  <!-- Book -->
+  <div class="row mt-4 mb-4">
+    <div class="col-md-4 mt-4">
+      <img class="book--cover-image" src="{{ book.photo_main.url }}" alt="">
+      <!-- Thumbnails -->
+      <div class="row mb-5 thumbs">
+        {% if book.photo_1 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_1.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_1.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %} {% if book.photo_1 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_2.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_2.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %} {% if book.photo_3 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_3.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_3.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %} {% if book.photo_4 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_4.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_4.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %} {% if book.photo_5 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_5.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_5.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %} {% if book.photo_6 %}
+        <div class="col-md-2 thumb-img">
+          <a href="{{ book.photo_6.url }}" data-lightbox="book-images">
+            <img src="{{ book.photo_6.url }}" alt="" class="img-fluid">
+          </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-8 mt-4">
+      <p>{{ book.description }}</p>
+      <p>
+        <strong>price:</strong> €{{ book.price }}</p>
+      <p>
+        <strong>category:</strong> {{ book.category_name }}</p>
+      <p>
+        <strong>author:</strong> {{ book.author }}</p>
+      <img class="book-author-image" src="{{ book.author.photo.url }}" alt="">
+      <p>{{ book.author.description }}</p>
+    </div>
+  </div>
+</div>
 {% endblock %}
