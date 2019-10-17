@@ -11,7 +11,7 @@ def books(request):
   page = request.GET.get('page')
   paged_books = paginator.get_page(page)
 
-  context = { 'books': paged_books }
+  context = { 'books': paged_books, 'books_all': books }
   return render(request, 'books/books.html', context)
 
 # return a single book
@@ -24,4 +24,29 @@ def book(request, book_id):
 
 # search
 def search(request):
-  return render(request, 'books/search.html')
+  queryset_list = Books.objects.order_by('-list_date')
+
+  # title
+  if 'title' in request.GET:
+    title = request.GET['title']
+    if title:
+      queryset_list = queryset_list.filter(title__icontains=title)
+
+  # Author
+  if 'author' in request.GET:
+    author = request.GET['author']
+    if author:
+      queryset_list = queryset_list.filter(author__exact=author)
+
+  # category
+  if 'category_name' in request.GET:
+    category_name = request.GET['category_name']
+    if category_name:
+      queryset_list = queryset_list.filter(category_name__icontains=category_name)
+
+  context = {
+    'books': queryset_list,
+    'values': request.GET
+  }
+  return render(request, 'books/search.html', context)
+

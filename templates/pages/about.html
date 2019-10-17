@@ -20,7 +20,7 @@
           It's so easy, just browse our selection of books, search for a particular book by author or title.  Purchase the book and it will be shipped directly to your door within 3 to 5 working days (depending on your postal service).
         </p>
         <p>
-          So what are you waiting for?  <a href="#" >sign up</a> today and start to enjoy what thousands of other readers are already receiving. 
+          So what are you waiting for?  <a href="{% url 'register' %}" >sign up</a> today and start to enjoy what thousands of other readers are already receiving. 
         </p>
         <hr/>
         <img src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/relax-and-read.jpg" class="about-page-image" alt="relaxing on sofa reading a book">
@@ -28,7 +28,7 @@
       <!-- Seller of the month section -->
       <div class="col-md-4">
         <div class="card mb-4">
-          <h4 class="text-center mb-4">Author of the Month</h4>
+          <h4 class="text-center card-header mb-4">Author of the Month</h4>
           {% if is_author_of_month %}
             {% for author_of_month in is_author_of_month %}
               <h6 class="author-title text-center">{{ author_of_month.name }}</h6>

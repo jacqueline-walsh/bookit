@@ -3,20 +3,26 @@
   <h3 class="mt-4">All Books</h3>
   <div class="card p-4 mt-4 mb-4 search-card">
     <h4>Search</h4>
-    <form action="" form-group>
+    <form action="{% url 'search' %}" form-group>
       <div class="row">
         <div class="col-md-4">
-          <label for="Search Title">search title</label>
-          <input type="text" name="search" id="" class="form-control">
+          <label for="Search Title">by title</label>
+          <input type="text" name="title" id="" class="form-control" value="{{ values.title }}" placeholder="keyword for title">
         </div>
         <div class="col-md-4">
-          <label for="Search Author">search author</label>
-          <input type="text" name="search" id="" class="form-control">
-        </div>
+            <label>by author</label>
+            <select name="author" class="form-control">
+              <option selected="true" disabled="disabled">Author (All)</option>
+              {% for book in books_all %}
+                <option value="{{ book.author }}">{{ book.author }}</option>                
+              {% endfor %}
+            </select>
+          </div>
         <div class="col-md-4">
-          <label for="Search Price">search category</label>
-          <input type="text" name="search" id="" class="form-control">
+          <label for="Search Price">by category</label>
+          <input type="text" name="category-name" id="" class="form-control">
         </div>
+          <button type="submit" class="btn-custom btn-block mt-4">Search</button>
       </div>
     </form>
   </div>

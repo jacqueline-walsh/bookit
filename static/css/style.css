@@ -21,7 +21,8 @@
 .btn-custom {
 	background-color: #FF9800;
 	color: #fff;
-	width: 80px;
+	width: 100px;
+	padding: 10px;
 	margin: auto;
 	border-radius: 5px;
 }
@@ -229,10 +230,11 @@ div.header-image {
 	border-radius: 5px
 }
 
-/* ************************************ ALL BOOKS PAGE ************************************ */
+/* ************************************ ALL BOOKS / SEARCH PAGE ************************************ */
 
 .search-card {
-	background-color: #ccc;
+	background: rgb(254,254,254);
+	background: radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(189,189,189,1) 100%);
 	padding: 20px;
 }
 
@@ -248,9 +250,11 @@ div.header-image {
 	border-color: #FF9800;
 }
 
+
+
 /* ************************************ SINGLE BOOK PAGE ************************************ */
 
-.book--cover-image {
+.book-cover-image {
 	width: 100%;
 }
 
@@ -268,3 +272,12 @@ div.header-image {
 	width: 15%;
 	border-radius: 5px;
 }
+
+/* ************************************ REGISTER PAGE ************************************ */
+
+.card-header {
+	background-color: #00796B;
+	color: #fff;
+	box-shadow: 1px 1px 1px #666;
+}
+

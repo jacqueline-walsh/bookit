@@ -49,11 +49,12 @@
     <div class="col-md-8 mt-4">
       <p>{{ book.description }}</p>
       <p>
-        <strong>price:</strong> €{{ book.price }}</p>
+        <strong>Price: </strong> €{{ book.price }}</p>
       <p>
-        <strong>category:</strong> {{ book.category_name }}</p>
+        <strong>Category: </strong> {{ book.category_name }}</p>
+        <p><strong>IBSN: </strong>{{ book.isbn }}</p>
       <p>
-        <strong>author:</strong> {{ book.author }}</p>
+        <strong>Author:</strong> {{ book.author }}</p>
       <img class="book-author-image" src="{{ book.author.photo.url }}" alt="{{ book.author }} image">
       <p>{{ book.author.description }}</p>
     </div>
