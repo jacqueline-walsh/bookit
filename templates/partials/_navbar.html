@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul class="navbar-nav ml-auto">
         <li
-          {% if '/' in request.path %}
+          {% if '/' == request.path %}
             class="nav-item active mr-3"
           {% else %}
             class="nav-item mr-3"
@@ -32,7 +32,7 @@
         </li>
 
         <li
-          {% if 'listings' in request.path %}
+          {% if 'books' in request.path %}
             class="nav-item active mr-3"
           {% else %}
             class="nav-item mr-3"
