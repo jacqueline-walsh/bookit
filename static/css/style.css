@@ -21,7 +21,7 @@
 .btn-custom {
 	background-color: #FF9800;
 	color: #fff;
-	width: 100px;
+	width: auto;
 	padding: 10px;
 	margin: auto;
 	border-radius: 5px;

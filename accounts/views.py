@@ -58,7 +58,13 @@ def login(request):
     return render(request, 'accounts/login.html')
 
 def logout(request):
-  if request.method == 'POST':
+    """ Logout the user out """
     auth.logout(request)
-    messages.success(request, "You are now logged out")
-    return redirect('login')
+    messages.success(request, "You have successfully been logged out!")
+    return redirect('index')
+
+def profile(request):
+    """ The user's profile page """
+    user = User.objects.get(email=request.user.email)
+    context = {'user': user}
+    return render(request, 'accounts/profile.html', context)

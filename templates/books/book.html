@@ -1,5 +1,12 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block title %} | {{ book.title }} {% endblock %}
+{% block content %}
 <div class="container">
+
+  <br/>
+  <!-- Messages -->
+  {% include 'partials/_messages.html' %}
+
   <h4 class="mt-4 pt-4">{{ book.title }}</h4>
   <!-- Book -->
   <div class="row mt-4 mb-4">
@@ -47,6 +54,9 @@
       </div>
     </div>
     <div class="col-md-8 mt-4">
+      <!-- Modal Button -->
+      <button class="btn-custom mb-4" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+
       <p>{{ book.description }}</p>
       <p>
         <strong>Price: </strong> €{{ book.price }}</p>
@@ -60,4 +70,54 @@
     </div>
   </div>
 </div>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Contact us</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            {% if user.is_authenticated %}
+              <input type="hidden" name="user_id" value="{{ user.id }}">
+            {% else%}
+              <input type="hidden" name="user_id" value="0">
+            {% endif %}
+
+            <input type="hidden" name="book_id" value="{{ book.id }}">
+
+            <div class="form-group">
+              <label for="property_name" class="col-form-label">Book:</label>
+              <input type="text" name="book" class="form-control" value="{{ book.title }} by: {{ book.author }}">
+            </div>
+            <div class="form-group">
+              <label for="name" class="col-form-label">Name:</label>
+              <input type="text" name="name" class="form-control" value="{% if user.is_authenticated %} {{ user.first_name }} {{ user.last_name }} {% endif %}" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-form-label">Email:</label>
+              <input type="email" name="email" class="form-control" value="{% if user.is_authenticated %} {{ user.email }} {% endif %}" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" class="col-form-label">Phone:</label>
+              <input type="text" name="phone" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="message" class="col-form-label">Message:</label>
+              <textarea name="message" class="form-control"></textarea>
+            </div>
+            <hr>
+            <input type="submit" value="Send" class="btn btn-block btn-custom">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
     'authors.apps.AuthorsConfig', 
-    'accounts.apps.AccountsConfig',    
+    'accounts.apps.AccountsConfig',  
+    'contacts.apps.ContactsConfig',    
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,10 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+# Email config
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = os.environ.get("EMAIL_ADDRESS")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
+EMAIL_PORT = 587
