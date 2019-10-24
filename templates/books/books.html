@@ -14,15 +14,15 @@
         <div class="col-md-4">
             <label>by author</label>
             <select name="author" class="form-control">
-              <option selected="true" disabled="disabled">Author (All)</option>
+              <option name="author" selected="true" disabled="disabled">Author (All)</option>
               {% for book in books_all %}
-                <option value="{{ book.author }}">{{ book.author }}</option>                
+                <option name=value="{{ book.author }}">{{ book.author }}</option>                
               {% endfor %}
             </select>
           </div>
         <div class="col-md-4">
           <label for="Search Price">by category</label>
-          <input type="text" name="category-name" id="" class="form-control">
+          <input type="text" name="category-name" id="" placeholder="category (All)" class="form-control">
         </div>
           <button type="submit" class="btn-custom btn-block mt-4">Search</button>
       </div>

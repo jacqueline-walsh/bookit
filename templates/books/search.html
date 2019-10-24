@@ -10,11 +10,11 @@
         <div class="col-md-4">
           <label for="Search Title">by title</label>
           <input type="text" name="title" id="" class="form-control" value="{{ values.title }}" placeholder="keyword for title">
-        </div>
+        </div>  
         <div class="col-md-4">
             <label>by author</label>
             <select name="author" class="form-control" value="{{ values.author }}">
-              <option selected="true" disabled="disabled">Author (All)</option>
+              <option selected="true" disabled="disabled">Authors (All)</option>
               {% for book in books %}
                 <option value="{{ book.author }}">{{ book.author }}</option>
                 {% if book.author == values.author %}
@@ -25,9 +25,9 @@
           </div>
         <div class="col-md-4">
           <label for="Search Price">by category</label>
-          <input type="text" name="category_name" id="" class="form-control" value="{{ values.category_name }}">
+          <input type="text" name="category_name" id="" class="form-control" placeholder="category" value="{{ values.category_name }}">
         </div>
-          <button type="submit" class="btn-custom mt-4">Search</button>
+          <button type="submit" class="btn-custom mt-4 btn-block">Search</button>
       </div>
     </form>
   </div>
