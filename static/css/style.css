@@ -41,7 +41,7 @@
 }
 
 /* Navigation */
-.navbar {
+.navbar, .dropdown-menu {
   background-color: #009688;
   color: #fff;
 	text-transform: uppercase;
@@ -50,6 +50,10 @@
 
 a.nav-link {
   font-family: 'Comfortaa', cursive;
+}
+
+.dropdown-menu {
+	width: 165px;
 }
 
 .brand-title {
