@@ -25,7 +25,7 @@ def book(request, book_id):
 # search
 def search(request):
   queryset_list = Books.objects.order_by('-list_date')
-  author_list = Author.objects.all()
+
   # title
   if 'title' in request.GET:
     title = request.GET['title']
@@ -36,7 +36,7 @@ def search(request):
   if 'author' in request.GET:
     author = request.GET['author']
     if author:
-      queryset_list = author_list.filter(name__exact=author)
+      queryset_list = queryset_list.filter(author__name__exact=author)
 
   # category
   if 'category_name' in request.GET:

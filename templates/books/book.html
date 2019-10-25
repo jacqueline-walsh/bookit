@@ -61,6 +61,13 @@
       <p>
         <strong>Price: </strong> €{{ book.price }}</p>
       <p>
+      {% if user.is_authenticated %}
+        {% if book.stock <= 0 %}
+          <p><b>Out of Stock</b></p>
+        {% else %}
+          <a href="{% url 'cart' %}"><button class="btn btn-custom mb-4"><i class="fas fa-shopping-cart"></i> Add to Cart</button></a><br>
+        {% endif %}
+      {% endif %}
         <strong>Category: </strong> {{ book.category_name }}</p>
         <p><strong>IBSN: </strong>{{ book.isbn }}</p>
       <p>
