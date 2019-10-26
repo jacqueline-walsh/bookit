@@ -324,19 +324,17 @@ a.custom-link {
 
 .custom_table {
   min-width: 400px;
-  font-size: 14px;
 }
 
 .table_head {
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  background-color: #f8f9fa;
+	background: rgb(254,254,254);
+	background: radial-gradient(circle, rgba(254,254,254,1) 0%, rgba(189,189,189,1) 100%);
 }
 
 .custom_image {
-  width: 100px;
-  height: 100px;
+	width: 75px;
+	height: 100px;
+	box-shadow: 3px 3px 3px #666;
 }
 
 .custom_a {
@@ -344,7 +342,14 @@ a.custom-link {
 }
 
 .custom_icon {
-  text-decoration: none;
+	text-decoration: none;
+	font-size: 17px;
   color: #FF9800;
+}
+
+/* stripe payment button */
+.stripe-button-el {
+	width: 100%;
+	display: block;
 }
 

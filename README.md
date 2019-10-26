@@ -1,4 +1,4 @@
-# BookIt - online auction site for used books
+# BookIt - ecommerce site for books
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 

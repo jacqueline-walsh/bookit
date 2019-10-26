@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class="container">
   {% if not cart_items %}
@@ -18,16 +19,16 @@
   <div>
     <div class="text-center">
       <br>
-      <h3>Your shopping cart</h3>
+      <h3 class="mb-4">Your Shopping Cart</h3>
     </div>
   </div>
-  <div class="row mx-auto">
+  <div class="row mx-auto  mt-4">
     <div class="col-12 col-sm-13 col-md-12 col-lg-6 text-center">
       <table class="table custom_table">
         <thead class="table_head">
           <tr>
             <th colspan="5">
-              Your items
+              Your Items
             </th>
           </tr>
         </thead>
@@ -35,16 +36,14 @@
           {% for cart_item in cart_items %}
             <tr>
               <td>
-                <a href="cart_item.book.get_absolute_url"><img src="{{cart_item.book.image.url}}" alt="{{ cart_item.book.name }}" class="float-left rounded custom_image"></a>
+                <a href="cart_item.book.get_absolute_url"><img src="{{cart_item.book.photo_main.url}}" alt="{{ cart_item.book.title }}" class="float-left rounded custom_image"></a>
               </td>
               <td class="text-left">
-                {{ cart_item.book.title }}
+                <strong>{{ cart_item.book.title }}</strong>
+                <br><br>
+                <strong>Price:</strong> €{{cart_item.book.price}}
                 <br>
-                SKU: {{cart_item.book.id}}
-                <br>
-                Price: €{{cart_item.book.price}}
-                <br>
-                Qty: {{cart_item.quantity}} x €{{cart_item.sub_total}}
+                <strong>Qty:</strong> {{cart_item.quantity}} x €{{cart_item.sub_total}}
               </td>
               <td>
                 €{{cart_item.sub_total}}
@@ -67,9 +66,9 @@
         </tbody>
       </table>
     </div>
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
       <table class="table custom_table">
-        <thead class="table_head">
+        <thead class="table_head text-center">
           <tr>
             <th>
               Checkout
@@ -84,12 +83,27 @@
           </tr>
           <tr>
             <td class="text-left">
-              Your total is: <strong>€{{ total }}</strong>
+              <h5 class="mt-4">Total: €{{ total }}</h5>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="mx-auto">
+      <form action="" method="POST">
+          {% csrf_token %}
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ data_key }}"
+            data-amount="{{ stripe_total }}"
+            data-description="{{ description }}"
+            data-image="{% static 'img/logo.png' %}"
+            data-locale="auto"
+            data-currency="EUR"
+            data-shipping-address="true"
+            data-billing-address="true"
+            data-zip-code="true">
+          </script>
+        </form>               
         <a href="{% url 'books' %}" class="btn btn-custom btn-block mt-4">Continue Shopping</a>
       </div>
     </div>
