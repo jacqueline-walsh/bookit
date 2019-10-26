@@ -319,3 +319,32 @@ a.custom-link {
 .change-password {
 	width: 550px;
 }
+
+/* ************************************ CART PAGE ************************************ */
+
+.custom_table {
+  min-width: 400px;
+  font-size: 14px;
+}
+
+.table_head {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  background-color: #f8f9fa;
+}
+
+.custom_image {
+  width: 100px;
+  height: 100px;
+}
+
+.custom_a {
+  text-decoration: none;
+}
+
+.custom_icon {
+  text-decoration: none;
+  color: #FF9800;
+}
+

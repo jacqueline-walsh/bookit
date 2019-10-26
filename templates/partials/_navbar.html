@@ -51,11 +51,13 @@
           </div>
         </div>
         <!-- cart link active path -->
-        <li {% if 'cart' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-          <!-- cart link -->
-          <a class="nav-link" href="{% url 'cart' %}">
-            <i class="fas fa-shopping-cart"></i> cart</a>
-        </li>
+        {% if item_count > 0 %}
+          <li {% if 'cart' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
+            <!-- cart link -->
+            <a class="nav-link" href="{% url 'cart:cart_detail' %}">
+              <i class="fas fa-shopping-cart"></i> cart ({{ item_count }})</a>
+          </li>
+        {% endif %}
         <!-- if user is not logged in -->
         {% else %}
         <!-- dropdown link for accounts -->

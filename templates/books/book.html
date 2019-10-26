@@ -65,7 +65,7 @@
         {% if book.stock <= 0 %}
           <p><b>Out of Stock</b></p>
         {% else %}
-          <a href="{% url 'cart' %}"><button class="btn btn-custom mb-4"><i class="fas fa-shopping-cart"></i> Add to Cart</button></a><br>
+          <a href="{% url 'cart:add_cart' book.id %}"><button class="btn btn-custom mb-4"><i class="fas fa-shopping-cart"></i> Add to Cart</button></a><br>
         {% endif %}
       {% endif %}
         <strong>Category: </strong> {{ book.category_name }}</p>
