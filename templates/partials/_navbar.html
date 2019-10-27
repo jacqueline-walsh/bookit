@@ -28,62 +28,6 @@
             <!-- all books link -->
             <i class="fas fa-book-reader"></i> Books</a>
         </li>
-        <!-- links only available when logged in -->
-        {% if user.is_authenticated %}
-        <!-- dropdown link for accounts -->
-        <div class="nav-item dropdown">
-          <!-- profile link and logout active path -->
-          <div {% if 'profile' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> accounts</a>
-            <div class="dropdown-menu pl-4">
-              <!-- profile link -->
-              <li {% if 'profile' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-                <a class="nav-link" href="{% url 'profile' %}">
-                  <i class="fas fa-user"></i> profile</a>
-              </li>
-              <!-- logout link -->
-              <li class="nav-item mr-3">
-                <a class="nav-link" href="{% url 'logout' %}">
-                  <i class="fas fa-sign-out-alt"></i> logout</a>
-              </li>
-            </div>
-          </div>
-        </div>
-        <!-- cart link active path -->
-        {% if item_count > 0 %}
-          <li {% if 'cart' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-            <!-- cart link -->
-            <a class="nav-link" href="{% url 'cart:cart_detail' %}">
-              <i class="fas fa-shopping-cart"></i> cart ({{ item_count }})</a>
-          </li>
-        {% endif %}
-        <!-- if user is not logged in -->
-        {% else %}
-        <!-- dropdown link for accounts -->
-        <div class="nav-item dropdown">
-          <!-- profile link and logout active path -->
-          <div {% if 'register' in request.path or 'login' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>          
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> accounts</a>
-            <div class="dropdown-menu pl-4">
-              <!-- register link active path -->
-              <li {% if 'register' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-                <!-- register link -->
-                <a class="nav-link" href="{% url 'register' %}">
-                  <i class="fas fa-user-plus"></i> Register</a>
-              </li>
-              <!-- login link active path -->
-              <li {% if 'login' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif %}>
-                <!-- login link -->
-                <a class="nav-link" href="{% url 'login' %}">
-                  <i class="fas fa-sign-in-alt"></i>
-                  Login</a>
-              </li>
-            </div>
-          </div>
-        </div>
-        {% endif %}
       </ul>
     </div>
   </div>

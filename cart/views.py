@@ -53,7 +53,6 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
     description = 'BookIt - Online Book Store'
     data_key = settings.STRIPE_PUBLISHABLE_KEY
     if request.method == 'POST':
-      # print(request.POST)
       try:
         token = request.POST['stripeToken']
         email = request.POST['stripeEmail']
@@ -104,13 +103,11 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             )
             oi.save()
             '''Reduce stock when order is placed or saved'''
-            books =Books.objects.get(id=order_item.book.id)
+            books = Books.objects.get(id=order_item.book.id)
             books.stock = int(order_item.book.stock - order_item.quantity)
             books.save()
             order_item.delete()
-            '''The terminal will print this message when the order is saved'''
-            print('The order has been created')
-          return redirect('cart:cart_detail')
+          return redirect('order:thanks', order_details.id)
         except ObjectDoesNotExist:
           pass
       except stripe.error.CardError as e:

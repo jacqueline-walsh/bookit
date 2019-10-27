@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %} | Cart {% endblock %}
 {% block content %}
 <div class="container">
   {% if not cart_items %}
@@ -36,7 +37,7 @@
           {% for cart_item in cart_items %}
             <tr>
               <td>
-                <a href="cart_item.book.get_absolute_url"><img src="{{cart_item.book.photo_main.url}}" alt="{{ cart_item.book.title }}" class="float-left rounded custom_image"></a>
+                <img src="{{cart_item.book.photo_main.url}}" alt="{{ cart_item.book.title }}" class="float-left rounded custom_image">
               </td>
               <td class="text-left">
                 <strong>{{ cart_item.book.title }}</strong>
