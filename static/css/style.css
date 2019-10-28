@@ -47,10 +47,7 @@
 #top-bar ul li a {
 	text-decoration: none;
 	color: rgb(74, 74, 74);
-}
-
-.social a {
-	color: #212121;
+	font-weight: bold;
 }
 
 /* Navigation */
@@ -65,22 +62,31 @@ a.nav-link {
   font-family: 'Comfortaa', cursive;
 }
 
-.dropdown-menu {
-	width: 165px;
+.navbar-brand {
+	margin-right: -25px;
 }
 
 .brand-title {
   font-family: 'Cinzel Decorative', cursive;
   color: #FF9800;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2em;
   text-shadow: 1px 1px 1px #B2DFDB;
-  transform: rotate(-15deg);
+  transform: rotate(-10deg);
+}
+
+.logo {
+	width: 65%;
 }
 
 .footer-img {
 	width: 50px;
 	margin-bottom: 10px;
+}
+
+.social a {
+	color: #212121;
+	padding-bottom: 10px;
 }
 
 

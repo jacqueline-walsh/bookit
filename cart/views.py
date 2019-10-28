@@ -5,6 +5,8 @@ from django.core.exceptions import ObjectDoesNotExist
 import stripe
 from django.conf import settings
 from order.models import Order, OrderItem
+from django.template.loader import get_template
+from django.core.mail import EmailMessage
 
 # Create your views here.
 def _cart_id(request):
@@ -12,6 +14,7 @@ def _cart_id(request):
     if not cart:
         cart = request.session.create()
     return cart
+
 
 def add_cart(request, book_id):
     book = Books.objects.get(id=book_id)
@@ -107,6 +110,13 @@ def cart_detail(request, total=0, counter=0, cart_items=None):
             books.stock = int(order_item.book.stock - order_item.quantity)
             books.save()
             order_item.delete()
+
+          try:
+            ''' Calling the sendEmail function '''
+            sendEmail(order_details.id)
+            print('The order email has been sent to the customer.')
+          except IOError as e:
+            return e
           return redirect('order:thanks', order_details.id)
         except ObjectDoesNotExist:
           pass
@@ -132,3 +142,24 @@ def full_remove(request, book_id):
     cart_item = CartItem.objects.get(book=book, cart=cart)
     cart_item.delete()
     return redirect('cart:cart_detail')
+
+
+def sendEmail(order_id):
+    transaction = Order.objects.get(id=order_id)
+    order_items = OrderItem.objects.filter(order=transaction)
+    try:
+        '''Sending the order'''
+        subject = "BookIt Online Book Store - New Order #{}".format(
+            transaction.id)
+        to = ['{}'.format(transaction.emailAddress)]
+        from_email = "orders@bookit.com"
+        order_information = {
+            'transaction': transaction,
+            'order_items':	order_items
+        }
+        message = get_template('email/email.html').render(order_information)
+        msg = EmailMessage(subject, message, to=to, from_email=from_email)
+        msg.content_subtype = 'html'
+        msg.send()
+    except IOError as e:
+        return e

@@ -61,6 +61,8 @@
         {% else %}
           <a href="{% url 'cart:add_cart' book.id %}"><button class="btn btn-custom mb-4"><i class="fas fa-shopping-cart"></i> Add to Cart</button></a><br>
         {% endif %}
+      {% else %}
+        <p><b>Register <a href="{% url 'register' %}">here</a> and buy this book!</b></p>
       {% endif %}
         <strong>Category: </strong> {{ book.category_name }}</p>
         <p><strong>IBSN: </strong>{{ book.isbn }}</p>
