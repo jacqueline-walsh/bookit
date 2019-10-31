@@ -19,7 +19,7 @@
           <td>{{ order.id }}</td>  
           <td>{{ order.created | date:"d M Y" }}</td>
           <td>€{{ order.total }}</td>
-          <td><a href="">View order</a></td>          
+          <td><a href="{% url 'order:order_details' order.id %}">View order</a></td>          
         </tr>
         {% endfor %}
       </tbody>

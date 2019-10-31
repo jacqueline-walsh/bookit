@@ -13,6 +13,6 @@ def viewOrder(request, order_id):
   if request.user.is_authenticated:
     email = str(request.user.email)
     order = Order.objects.get(id=order_id, emailAddress=email)
-    order_items = Order.object.filter(oder=order)
+    order_items = OrderItem.objects.filter(order=order)
     context =  {'order': order, 'order_items': order_items}
-  return render(request, 'partials/_order_history', context)
+  return render(request, 'order/order_details.html', context)
