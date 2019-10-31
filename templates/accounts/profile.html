@@ -2,9 +2,12 @@
 {% block title %} | Profile {% endblock %}
 {% block content %}
 <div class="container mt-4 mb-4">
-    <h3>User Profile:</h3>
+    {{ user.first_name }}
+    <h3 class="mb-4">User Profile:</h3>
     <p><strong>Username: </strong>{{ user.username }}</p>
     <p><strong>Email: </strong>{{ user.email }}</p><br/>
     <a class="custom-link" href="{% url 'password_change' %}">change my password</a>
+
+    {% include 'partials/_order_history.html' %}
 </div>
 {% endblock %}

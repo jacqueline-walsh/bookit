@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from .forms import LoginForm, RegisterForm
+from order.models import Order, OrderItem
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def register(request):
@@ -68,8 +70,12 @@ def logout(request):
     messages.success(request, "You have successfully been logged out!")
     return redirect('index')
 
+@login_required()
 def profile(request):
     """ The user's profile page """
-    user = User.objects.get(email=request.user.email)
-    context = {'user': user}
+    if request.user.is_authenticated:
+      email = str(request.user.email)
+      order_details = Order.objects.filter(emailAddress=email)
+    context = {'order_details': order_details}
     return render(request, 'accounts/profile.html', context)
+
