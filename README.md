@@ -2,6 +2,8 @@
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 
+[![Build Status](https://travis-ci.org/jacqueline-walsh/bookit.svg?branch=master)](https://travis-ci.org/jacqueline-walsh/bookit)
+
 BookIt!  The online books store for book lovers across the world.  
  
 ## UX

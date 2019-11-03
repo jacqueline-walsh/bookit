@@ -7,7 +7,7 @@
   <!-- Messages -->
   {% include 'partials/_messages.html' %}
 
-  <h4 class="mt-4 pt-4">{{ book.title }}</h4>
+  <h4 class="mt-4 pt-4" value="{{book.title}}">{{ book.title }}</h4>
   <!-- Book -->
   <div class="row mt-4 mb-4">
     <div class="col-md-4 mt-4">
@@ -54,11 +54,12 @@
       <p>{{ book.description }}</p>
       <p>
         <strong>Price: </strong> €{{ book.price }}</p>
-      <p>
+
       {% if user.is_authenticated %}
         {% if book.stock <= 0 %}
           <p><b>Out of Stock</b></p>
         {% else %}
+          <!-- add to cart button -->
           <a href="{% url 'cart:add_cart' book.id %}"><button class="btn btn-custom mb-4"><i class="fas fa-shopping-cart"></i> Add to Cart</button></a><br>
         {% endif %}
       {% else %}
