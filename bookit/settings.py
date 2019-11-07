@@ -27,8 +27,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
 
 # if DEBUG:
 #     # for development only
