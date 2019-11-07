@@ -14,3 +14,4 @@ def about(request):
   is_author_of_month = Author.objects.all().filter(is_author_of_month=True) 
   context = {'authors' : authors, 'is_author_of_month': is_author_of_month }
   return render(request, 'pages/about.html', context)
+
