@@ -1,1 +1,1 @@
-web: gunicorn bookit.wsgi:application
+web: gunicorn bookit-online-book-store.wsgi:application
