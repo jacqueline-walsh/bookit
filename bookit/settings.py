@@ -99,7 +99,7 @@ WSGI_APPLICATION = 'bookit.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse("postgres://eotlbxfcttqpbi:eadc554616736a725bc369928b7947e93351499cb70ed1584303f5cf06955d82@ec2-54-217-221-21.eu-west-1.compute.amazonaws.com:5432/d1psnhim7577o5")
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 # Password validation
