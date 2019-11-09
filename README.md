@@ -45,21 +45,59 @@ The user is a first time visitor to the site:
 
 ## Features
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+Each site page has been detailed individually below and all features explained.
 
 ### Home Page
 
- 
-### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+This is the shop window to the site.  All users are able to access this page and at a glance be invited to explore further.  There is a carousel of books on display and quotes from a few favourite.  Below there are 3 of the newest feature books on offer that the user can click on for more information.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+### About Page
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+The Who we are page.  All users are able to access this page.  There is a section for author of the month, where the author can be changed each month by the site admin in the admin dashboard by a simple checkbox.
+
+### All Books
+
+All books are available to all users and can be clicked on to provide the user with more information about the book.  The book page has been paginated to show 6 books per page.  
+
+At the top of the page there is a search panel where the user can search for any book in the system by either, title, author or category.
+
+### Book (Single Book Page)
+
+There is an image of the book cover with individual thumbnails for the first 5 pages of the book which the user can click on and view with a lightbox gallery.
+
+More information can be found about the book including, book Title, book description, ISBN, price, categories, author, description of author.  For users not registered and logged in there is a link inviting the user to register so they may purchase the book.  For users already registered and logged in there is a 'add to cart' button.  however if the book currently out of stock the 'add to cart' button is removed and a simple message advising the user that the books is out of stock.  All users can click on a contact us button and complete a simple form for more information on that book.  Where possible the contact for will auto-populate fields such as book title, username and email.  An email will be sent to admin to alter them that a new message has been sent.
+
+### Shopping Cart
+
+Only logged in users can access the shopping cart page.  This can be accessed by the user either by an icon on the top navigation bar or when the user clicks the 'add to cart' button on the book page and is directed automatically to the shopping cart page.  The users has various options on this page, either amend quantity to purchase, delete a book item, go back and continue shopping or pay with card.  The user is only able to add to cart what is in stock, so should the user order the last book the add to quantity button is removed and they are not able to by what is not in stock.  When a book is purchased the admin stock will be reduced accordingly until the book is out of stock at which time a notice will be placed on the book page, until admin updates the stock level.  
+
+### Stripe Pay with Card
+
+This is a stripe feature to allow the user to pay for the order by card.  This is where the user can enter, email, billing and shipping details, phone number, check the amount to pay and then enter their card details.
+
+### Thank You Page
+
+When user has paid for the order they will be directed to a thank you page and will also receive an email with a breakdown of their order confirmation.  
+
+### Registration
+
+Registration page will all fields required, validation on email and matching passwords.  An Alert message will advise the user if the username or email address already exists.  Once registered the new user is automatically loggged in and directed to the home page.
+
+### Login
+
+User can login with username and password.  An alert message will pop up advising the user if the username or password is incorrect.  Once logged in the user is directed to the home page.  When logged in the top navigation links change from register and login to profile and logout.  There is also a forgotton password link the user can use should they forget their password.
+
+### Profile 
+
+This page lists the username and email and also a link to change password.  This page also hosts the order history and gives details of all previous purchased with individual links to each order placed.
+
+### Admin Dashboard
+
+This section is only available to the administrator of the site.  Here the admin can add / edit / delete, books, authors, users and groups.  Admin can see contact form messages sent by the user and all orders placed.  Admin can control the stock levels, change author of the month, choose whether the book is available or not.  
 
 ### Features Left to Implement
-- Another feature idea
+
+- Another feature ideas would be to implement book reviews / recommendations.  A members readers club with chat forum.
 
 ## Technologies Used
 
