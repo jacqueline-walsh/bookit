@@ -37,11 +37,7 @@ The user is a first time visitor to the site:
 - User is directed to the thank you page with their order number.
 - User receives an email, giving details of the order purchased.
 
-
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png" width="100%">
 <img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png" width="100%">
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png" width="100%">
-
 
 ## Features
 
@@ -53,7 +49,7 @@ This is the shop window to the site.  All users are able to access this page and
 
 ### About Page
 
-The Who we are page.  All users are able to access this page.  There is a section for author of the month, where the author can be changed each month by the site admin in the admin dashboard by a simple checkbox.
+The Who we are page.  All users are able to access this page.  There is a section for author of the month, where the author can be changed each month by the site admin in the admin dashboard by a simple checkbox.  A javascript image slider shows relaxing reading. 
 
 ### All Books
 
@@ -79,6 +75,7 @@ This is a stripe feature to allow the user to pay for the order by card.  This i
 
 When user has paid for the order they will be directed to a thank you page and will also receive an email with a breakdown of their order confirmation.  
 
+
 ### Registration
 
 Registration page will all fields required, validation on email and matching passwords.  An Alert message will advise the user if the username or email address already exists.  Once registered the new user is automatically loggged in and directed to the home page.
@@ -93,7 +90,7 @@ This page lists the username and email and also a link to change password.  This
 
 ### Admin Dashboard
 
-This section is only available to the administrator of the site.  Here the admin can add / edit / delete, books, authors, users and groups.  Admin can see contact form messages sent by the user and all orders placed.  Admin can control the stock levels, change author of the month, choose whether the book is available or not.  
+This section is only available to the administrator of the site.  Here the admin can add / edit / delete, books, authors, users and groups.  Admin can see contact form messages sent by the user and all orders placed.  Admin can control the stock levels, change author of the month, choose whether the book is available or not.  The admin dashboard has been customized to match with the site theme.
 
 ### Features Left to Implement
 
@@ -101,52 +98,149 @@ This section is only available to the administrator of the site.  Here the admin
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+Many languages, frameworks and libraries have been used on this project:
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+### Repository
+github - Github has been used throughout the project. At each stage throughout the development of the application the changes have been pushed to the repostory to provide a history of commits and changes of each new feature
+
+### Frontend
+Django Framework - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. [Django Framework](https://www.djangoproject.com/)
+HTML5 - Semantic HTML5 has been implemented thoughout the site.
+CSS3 - used for the styling of the site and to provide a more visually pleasing effect.
+Javascript - For slider on about page and alert.
+JQuery - the project uses JQuery to simplify DOM manipulation and for the inclusion of lightbox plugin. [JQuery](https://jquery.com/) [Lightbox Plugin](https://lokeshdhakar.com/projects/lightbox2/)
+bootstrap - Bootstrap was implemented to assist with site layout and responsive design [bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+Font Awesome - visual icons have been used from Font Awesome version 5. [Font Awesome](https://fontawesome.com/)
+Google Fonts - for the typeography of the site. [Google Fonts](https://fonts.google.com/)
+AWS - storage for all images so to keep the site as light as possible. Also where possible all links are CDN. [AWS](https://aws.amazon.com/) 
+Stripe - Payment integration system. [stripe](https://stripe.com/ie)
+MailGun - Easy SMTP integration, RESTful API abstracts away the messy details of sending transactional or bulk email. [mailgun](https://www.mailgun.com/)
+
+### Backend
+SQLite - Database for local hosting and development
+Postgres - Database for remote hosting and production.
+Python - Language used with the Django Framework.
+
+### Hosting
+Heroku - the application has been hosted on heroku [heroku](https://heroku.com)
 
 
 ## Testing
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+Each functionality has been run and tested at each stage of development and any bugs or issues have been dealt with accordingly, before moving on to another step.  
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+Media queries have been used to ensure CSS is working optimally on all mobile devices.  
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+Unit testing has been carried out on the site successfully.
 
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+[Travis](https://travis-ci.org/) a continuous integration & continuous delivery platform has been integrated on the github page and passes all tests.  See [travis test](https://github.com/jacqueline-walsh/bookit/blob/master/site-resources/docs/Travis_test_passed.png)
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+### manual testing of the registration form:
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+    1. Go to the "Registration" page [registration](https://bookit-online-book-store.herokuapp.com/accounts/register)
+    2. Try to submit the empty registration form and an alert message pops up on the first name field, "please fill in this field"
+    3. Try to submit the registration form with username of 4 characters and a message pops up, "Please lengthen this text to 6 characters or more (you are currently only using 4 characters)".
+    4. Try to submit an incorrect email with just the name 'julie' and an alert message pops up, "Please include an '@' in the email address, 'julie' is missing an '@'"
+    5. Try to submit the form with all fields correctly completed and the username, "samSmith" and an alert message pops up, "Error username already exists"
+    6. Try to submit the form with all fields correctly completed and the email, "sam@gmail.com" and an alert message pops up, "Error that email already exists"
+    7. Try to submit the form with a password of "pass", and an alert message pops up, "Please lengthen this to 8 characters or more.  (you are currently using 4 characters)" 
+    8. Try to complete the form with mismatch passwords and an alert message pops up, "Error passwords do not match"
+    9. Try to submit the form with all inputs valid and verify that a success message appears.
+
+The site has been intensively user tested to ensure the following:
+
+- all links are fully functioning
+- validation on forms prompting and working correctly
+- registration return error message if username already in database
+- password and password confirm return match if same
+- mobile views are in good design and order
+- user experience has been an enjoyable experience with no frustration of getting lost or confused
+- flash messages appear and are correctly displayed
+- data is being received and stored correctly on the database
+- email confirmation are recieved correctly by both admin and user
 
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+Heroku has been used for the deployment of the site, see settings below for further details:
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-- Different values for environment variables (Heroku Config Vars)?
-- Different configuration files?
-- Separate git branch?
+A free cloud hosting platform which simplify the deployment process.
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+### Heroku Settings added Config Vars
+
+KEY | VALUE
+--- | -----
+DATABASE_URL | link to db |
+AWS_ACCESS_KEY_ID | aws access key |
+AWS_SECRET_ACCESS_KEY | aws secret key |
+AWS_STORAGE_BUCKET_NAME | aws bucket name |
+EMAIL_ADDRESS | email address |
+EMAIL_PASSWORD | email password |
+EMAIL_HOST_PASSWORD | password |
+EMAIL_HOST_USER | host name |
+SECRET_KEY | site secret key |
+STRIPE_PUBLISHABLE_KEY | stripe key |
+STRIPE_SECRET_KEY | stripe secret key |
+
+
+### Deploy to Heroku via Terminal
+- Go to heroku and create a new app
+- In terminal carry out the following steps
+    - $ heroku login
+    - $ git add .
+    - $ git commit -m "message for deployment"
+    - $ git push heroku master
+- Heroku then launches the application and provides a link to the new live site
+- Go to heroku and select more tab in top right and click on Restart All Dynos
+- Select tab to Open app in browser next to more tab.
+
+## Deployment from Github to localhost
+
+*Local deployment relies on a database connection and therefore you will need to set up your own environment*
+
+1. Clone / download the repository at [https://github.com/jacqueline-walsh/bookit.git](https://github.com/jacqueline-walsh/bookit.git)
+2. Create a virtual environment 
+    - `python3 -m venv env`
+3. Activate virtual environment 
+    - `source env/bin/activate`
+4. Install required packages:
+    - `pip install -r requirements.txt`
+5. In bookit / settings.py ensure following:
+    - on line 14 uncomment
+        - import env
+    - on line 28 uncomment
+        - DEBUG=True
+    - on line 30 comment out
+        - ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
+    - on line 31 uncomment 
+        - ALLOWED_HOSTS = []
+6.  run
+    - `python manage.py migrate`
+7.  create admin superuser
+    - `python manage.py createsuperuser`
+8.  then run 
+    - `python manage.py makemigrations`
+9.  again run
+    - `python manage.py migrate`   
+6. finally, to run application:
+    - `python manage.py runserver`
+5. This should now run on your local environment on `http://127.0.0.1:8000/`
 
 
 ## Credits
 
 ### Content
-- The text for section Y was copied from the [Wikipedia article Z](https://en.wikipedia.org/wiki/Z)
+- Amazon online shopping for book and author details
 
 ### Media
 - The photos used in this site were obtained from ...
+    - [Google images](https://www.google.com/search?q=books+images&tbm=isch&tbs=rimg:CS3g2DGFtxWhImC7IrcZTs5MBiaL7jB_1JhBZmcnATwpTTbOyIcQ-uExgfNM9ZvKLxaXAQSZr322t-pWYghj6UTg7qfLGKeVZtxPg9Eb5SqFidpueAxzgi46x08t9RwOKn1Sp5zcdUpCcHNoqEgm7IrcZTs5MBhHWe4XDtUZI4yoSCSaL7jB_1JhBZEUp4VZij5omCKhIJmcnATwpTTbMRgy-BJxHwoMUqEgmyIcQ-uExgfBGALIpe877dSioSCdM9ZvKLxaXAEZY8D2Bj2DvwKhIJQSZr322t-pUROZprjGP7fxYqEgmYghj6UTg7qREzf966UE20dyoSCfLGKeVZtxPgEYwLqjaSacBhKhIJ9Eb5SqFidpsRJv9s7XXv3OAqEgmeAxzgi46x0xHgwCgIK-SWuSoSCct9RwOKn1SpEbJuOQGO3mL4KhIJ5zcdUpCcHNoRf4mDAEgf-4o&tbo=u&sa=X&ved=2ahUKEwiDjYjFrZHlAhWGQEEAHWEmAK4QrnZ6BAgBEBc&biw=2560&bih=1209&dpr=2#imgrc=iFgNISutgL4vaM:)
+    - [Amazon online shopping](https://www.amazon.co.uk/)
+    - [3D Carousel](https://codepen.io/jaskiranchhokar/pen/wmGXav. -  https://www.cssscript.com/automatic-3d-image-rotator-pure-css/)
+    - [Javascript slider](https://codepen.io/gabrieleromanato/pen/dImly)
+    - [colour scheme](https://www.materialpalette.com/?ref=producthunt)
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration many different sources surfing the web, but not least of all from [Django documentation](https://docs.djangoproject.com/en/2.2/)
+
