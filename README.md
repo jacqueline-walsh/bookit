@@ -31,9 +31,9 @@ The user is a first time visitor to the site:
 - User receives an email, giving details of the order purchased.
 
 
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png">
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png">
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png" "width=100%">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png" "width=100%">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png" "width=100%">
 
 
 ### Links to resources
