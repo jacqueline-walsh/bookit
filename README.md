@@ -1,27 +1,54 @@
-# BookIt - ecommerce site for books
+# BookIt - ecommerce site for books 
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 
 [![Build Status](https://travis-ci.org/jacqueline-walsh/bookit.svg?branch=master)](https://travis-ci.org/jacqueline-walsh/bookit)
 
-BookIt!  The online books store for book lovers across the world.  
- 
+
 ## UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+BookIt!  The online books store for book lovers across the world. Register, login, browse or search for that book you have always wanted to read.  Have a query on a particular book, you can send us a message on our contact us form.  Order your book, pay online and an email confirmation will be sent to you with confirmation of your order.  Go to the profile page to view your order history.  It's all just a click away. 
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-- As a user type, I want to perform an action, so that I can achieve a goal.
+BookIt design concept is to give the user a clean modern experience with quick access to what the user needs, with search or browse functionality.  A topbar allows the user to access the registration, login and profile pages.  The main navigation provides one click links to home, about and all books.  Only registered and logged in users can see the add to cart button.  For the site owner / admin stock levels on each book is recorded and will indicate to the user when a book is out of stock and when the site owner needs to add more stock.
 
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+### User Story
 
-[Github](https://github.com/jacqueline-walsh/bookit)
-[Trello](https://trello.com/b/hiyXz2DG/bookit-book-aution-site)
+The user is a first time visitor to the site:
 
+- User looks at the main navbar and see they are able to view the home page, about page and all books.
+- User also notes that there is a top navigation bar which has a register and login link.  
+- User clicks on all the about page and reads all about the site and can see who the author of the month is and with a short description.
+- User sees that on the book page there are buttons to check out each individual book in detail.
+- User is a big fan of Harry Potter and the author, JK Rowling, they type the author's name into the search section and click the search bar.
+- User can see a selection of JK Rowling books and they click on the image for the book, The Cursed Child.
+- As the user is not registered with the site they are unable to see a add to cart button but instead have a link to enable them to register and buy the book.
+- User click the register link and is presented with the registration form.  Which is clear and easy to use with validation messages to help complete the form - The correctly.  They register their details and click submit.
+- On registration the user is logged in automatically. 
+- User can then proceed to click the button, "add to cart".
+- User is directed to the view cart page.  
+- User clicks the pay with cart button and completes the transaction by adding billing address, shipping address, card details and submitting the payment.
+- User is directed to the thank you page with their order number.
+- User receives an email, giving details of the order purchased.
+
+
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png">
+
+
+### Links to resources
+
+- [Live Site](https://bookit-online-book-store.herokuapp.com/)
+- [Github](https://github.com/jacqueline-walsh/bookit)
+- [Wireframes](https://github.com/jacqueline-walsh/bookit/tree/master/wireframes)
+- [Trello](https://trello.com/b/hiyXz2DG/bookit-book-aution-site)
 
 ## Features
 
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+
+### Home Page
+
  
 ### Existing Features
 - Feature 1 - allows users X to achieve Y, by having them fill out Z
