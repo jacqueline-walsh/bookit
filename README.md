@@ -11,6 +11,13 @@ BookIt!  The online books store for book lovers across the world. Register, logi
 
 BookIt design concept is to give the user a clean modern experience with quick access to what the user needs, with search or browse functionality.  A topbar allows the user to access the registration, login and profile pages.  The main navigation provides one click links to home, about and all books.  Only registered and logged in users can see the add to cart button.  For the site owner / admin stock levels on each book is recorded and will indicate to the user when a book is out of stock and when the site owner needs to add more stock.
 
+### Links to resources
+
+- [Live Site](https://bookit-online-book-store.herokuapp.com/)
+- [Github](https://github.com/jacqueline-walsh/bookit)
+- [Wireframes](https://github.com/jacqueline-walsh/bookit/tree/master/wireframes)
+- [Trello](https://trello.com/b/hiyXz2DG/bookit-book-aution-site)
+
 ### User Story
 
 The user is a first time visitor to the site:
@@ -31,17 +38,10 @@ The user is a first time visitor to the site:
 - User receives an email, giving details of the order purchased.
 
 
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png" width="100%">
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png" width="100%">
-<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png" width="100%">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/order_thank_you_page.png">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png">
+<img src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/history_order_details.png">
 
-
-### Links to resources
-
-- [Live Site](https://bookit-online-book-store.herokuapp.com/)
-- [Github](https://github.com/jacqueline-walsh/bookit)
-- [Wireframes](https://github.com/jacqueline-walsh/bookit/tree/master/wireframes)
-- [Trello](https://trello.com/b/hiyXz2DG/bookit-book-aution-site)
 
 ## Features
 
