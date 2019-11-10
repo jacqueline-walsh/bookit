@@ -205,26 +205,17 @@ STRIPE_SECRET_KEY | stripe secret key |
     - `source env/bin/activate`
 4. Install required packages:
     - `pip install -r requirements.txt`
-5. In bookit / settings.py ensure following:
-    - on line 14 uncomment
-        - import env
-    - on line 28 uncomment
-        - DEBUG=True
-    - on line 30 comment out
-        - ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
-    - on line 31 uncomment 
-        - ALLOWED_HOSTS = []
-6.  run
+5.  run
     - `python manage.py migrate`
-7.  create admin superuser
+6.  create admin superuser
     - `python manage.py createsuperuser`
-8.  then run 
+7.  then run 
     - `python manage.py makemigrations`
-9.  again run
+8.  again run
     - `python manage.py migrate`   
-6. finally, to run application:
+9. finally, to run application:
     - `python manage.py runserver`
-5. This should now run on your local environment on `http://127.0.0.1:8000/`
+10. This should now run on your local environment on `http://127.0.0.1:8000/`
 
 
 ## Credits
