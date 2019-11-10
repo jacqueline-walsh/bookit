@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 from django.contrib.messages import constants as messages
 import os
-import env
+# import env
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -26,10 +26,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-# ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
+# ALLOWED_HOSTS = []
 
 
 # if DEBUG:
