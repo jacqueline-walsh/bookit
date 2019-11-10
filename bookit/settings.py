@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+from django.contrib.messages import constants as messages
 import os
 # import env
 import dj_database_url
@@ -33,7 +34,7 @@ ALLOWED_HOSTS = ['bookit-online-book-store.herokuapp.com']
 
 # if DEBUG:
 #     # for development only
-#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 # Application definition
@@ -48,11 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'pages.apps.PagesConfig',
     'books.apps.BooksConfig',
-    'authors.apps.AuthorsConfig', 
-    'accounts.apps.AccountsConfig',  
-    'contacts.apps.ContactsConfig',    
-    'cart.apps.CartConfig',  
-    'order.apps.OrderConfig',  
+    'authors.apps.AuthorsConfig',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
+    'cart.apps.CartConfig',
+    'order.apps.OrderConfig',
     'storages',
     'stripe',
 ]
@@ -72,7 +73,7 @@ ROOT_URLCONF = 'bookit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates' )],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,7 +93,8 @@ WSGI_APPLICATION = 'bookit.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 if "DATABASE_URL" in os.environ:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    DATABASES = {'default': dj_database_url.parse(
+        os.environ.get('DATABASE_URL'))}
 else:
     print("Database URL not found. Using SQLite instead")
     DATABASES = {
@@ -148,7 +150,6 @@ STATICFILES_DIRS = [
 ]
 
 # messages
-from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
