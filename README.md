@@ -1,4 +1,4 @@
-# BookIt - ecommerce site for books 
+# BookIt - Ecommerce Site for Books 
 
 <img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
 
@@ -45,52 +45,95 @@ Each site page has been detailed individually below and all features explained.
 
 ### Home Page
 
-This is the shop window to the site.  All users are able to access this page and at a glance be invited to explore further.  There is a carousel of books on display and quotes from a few favourite.  Below there are 3 of the newest feature books on offer that the user can click on for more information.
+- shop window to the site
+- all users are able to access this page and at a glance be invited to explore further.  
+- a carousel of books on display and quotes from a few favourite
+- 3 of the newest feature books on offer 
+- click on a feature book for more information
 
 ### About Page
 
-The Who we are page.  All users are able to access this page.  There is a section for author of the month, where the author can be changed each month by the site admin in the admin dashboard by a simple checkbox.  A javascript image slider shows relaxing reading. 
+- all users are able to access this page.  
+- author of the month section. Author can be changed each month by the site admin in the admin dashboard by a simple checkbox.  
+- javascript image slider shows relaxing reading. 
 
 ### All Books
 
-All books are available to all users and can be clicked on to provide the user with more information about the book.  The book page has been paginated to show 6 books per page.  
+- all books are available to all users 
+- click on a book or button to see individual book page  
+- book page has been paginated to show 6 books per page
+- search section.  All books can be search by book title or filtered by author or category.
 
-At the top of the page there is a search panel where the user can search for any book in the system by either, title, author or category.
 
 ### Book (Single Book Page)
 
-There is an image of the book cover with individual thumbnails for the first 5 pages of the book which the user can click on and view with a lightbox gallery.
-
-More information can be found about the book including, book Title, book description, ISBN, price, categories, author, description of author.  For users not registered and logged in there is a link inviting the user to register so they may purchase the book.  For users already registered and logged in there is a 'add to cart' button.  however if the book currently out of stock the 'add to cart' button is removed and a simple message advising the user that the books is out of stock.  All users can click on a contact us button and complete a simple form for more information on that book.  Where possible the contact for will auto-populate fields such as book title, username and email.  An email will be sent to admin to alter them that a new message has been sent.
+- all users can access the invididual book page
+- image of the book cover 
+- JQuery lightbox gallery provides individual thumbnails for the first 5 pages of the book
+- book title, book description, ISBN, price, book categories, author and description of author provided. 
+- only registed and logged in users can access "add to cart" button.
+- if no stock available logged in user will see message advising the book is out of stock 
+- users not registered are invited to register via a link so they may purchase the book.  
+- contact us button for all users.  If user logged in contact form will auto-populate fields such as book title, username and email 
+- an email will be sent to admin to alter them that a new message has been sent.
 
 ### Shopping Cart
 
-Only logged in users can access the shopping cart page.  This can be accessed by the user either by an icon on the top navigation bar or when the user clicks the 'add to cart' button on the book page and is directed automatically to the shopping cart page.  The users has various options on this page, either amend quantity to purchase, delete a book item, go back and continue shopping or pay with card.  The user is only able to add to cart what is in stock, so should the user order the last book the add to quantity button is removed and they are not able to by what is not in stock.  When a book is purchased the admin stock will be reduced accordingly until the book is out of stock at which time a notice will be placed on the book page, until admin updates the stock level.  
+- only logged in users can access the shopping cart page.  
+- page is accessed by logged in user when item is added to cart either on topnav bar or when user selects "add to cart" button. 
+- users has various options on this page: 
+    - amend item quantity 
+        - user can only add to items when stock available.  If no further stock available the add button is removed
+    - delete a book item 
+    - go back and continue shopping
+    - pay with card 
 
 ### Stripe Pay with Card
 
-This is a stripe feature to allow the user to pay for the order by card.  This is where the user can enter, email, billing and shipping details, phone number, check the amount to pay and then enter their card details.
+- this is where the user can enter:
+    - email 
+    - billing and shipping details 
+    - phone number 
+    - check the amount to pay 
+    - enter card details
 
 ### Thank You Page
 
-When user has paid for the order they will be directed to a thank you page and will also receive an email with a breakdown of their order confirmation.  
+- when user has paid for the order they will be directed to a thank you page 
+- the user will receive an email confirming there order has been placed  
 
 
 ### Registration
 
-Registration page will all fields required, validation on email and matching passwords.  An Alert message will advise the user if the username or email address already exists.  Once registered the new user is automatically loggged in and directed to the home page.
+- all fields are required 
+- email validation to detect a valid email pattern
+- validate password and confirm password match.  
+- alert message will advise the user if the username or email address already exists  
+- registered user is automatically loggged in
 
 ### Login
 
-User can login with username and password.  An alert message will pop up advising the user if the username or password is incorrect.  Once logged in the user is directed to the home page.  When logged in the top navigation links change from register and login to profile and logout.  There is also a forgotton password link the user can use should they forget their password.
+- login with username and password.  
+- alert message will advise user if the username or password is incorrect  
+- when user logged in the top navigation bar changes from register and login to profile and logout.  
+- a forgotton password link should user forget password
 
 ### Profile 
 
-This page lists the username and email and also a link to change password.  This page also hosts the order history and gives details of all previous purchased with individual links to each order placed.
+-  details username and email 
+- a link for user to change password  
+- order history details with link to invidual orders
 
 ### Admin Dashboard
 
-This section is only available to the administrator of the site.  Here the admin can add / edit / delete, books, authors, users and groups.  Admin can see contact form messages sent by the user and all orders placed.  Admin can control the stock levels, change author of the month, choose whether the book is available or not.  The admin dashboard has been customized to match with the site theme.
+- available only to the administrator of the site  
+- admin can add / edit / delete, books, authors, users and groups  
+- contact form messages can be reviewed by admin
+- order details can be reviewed by admin
+- stock levels can be edited
+- author of the month changed
+- select if the book is available 
+- customized dashboard to match with the site theme
 
 ### Features Left to Implement
 
@@ -104,22 +147,22 @@ Many languages, frameworks and libraries have been used on this project:
 github - Github has been used throughout the project. At each stage throughout the development of the application the changes have been pushed to the repostory to provide a history of commits and changes of each new feature
 
 ### Frontend
-Django Framework - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. [Django Framework](https://www.djangoproject.com/)
-HTML5 - Semantic HTML5 has been implemented thoughout the site.
-CSS3 - used for the styling of the site and to provide a more visually pleasing effect.
-Javascript - For slider on about page and alert.
-JQuery - the project uses JQuery to simplify DOM manipulation and for the inclusion of lightbox plugin. [JQuery](https://jquery.com/) [Lightbox Plugin](https://lokeshdhakar.com/projects/lightbox2/)
-bootstrap - Bootstrap was implemented to assist with site layout and responsive design [bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
-Font Awesome - visual icons have been used from Font Awesome version 5. [Font Awesome](https://fontawesome.com/)
-Google Fonts - for the typeography of the site. [Google Fonts](https://fonts.google.com/)
-AWS - storage for all images so to keep the site as light as possible. Also where possible all links are CDN. [AWS](https://aws.amazon.com/) 
-Stripe - Payment integration system. [stripe](https://stripe.com/ie)
-MailGun - Easy SMTP integration, RESTful API abstracts away the messy details of sending transactional or bulk email. [mailgun](https://www.mailgun.com/)
+- Django Framework - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. [Django Framework](https://www.djangoproject.com/)
+- HTML5 - Semantic HTML5 has been implemented thoughout the site.
+- CSS3 - used for the styling of the site and to provide a more visually pleasing effect.
+- Javascript - For slider on about page and alert.
+- JQuery - the project uses JQuery to simplify DOM manipulation and for the inclusion of lightbox plugin. [JQuery](https://jquery.com/) [Lightbox Plugin](https://lokeshdhakar.com/projects/lightbox2/)
+- bootstrap - Bootstrap was implemented to assist with site layout and responsive design [bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+- Font Awesome - visual icons have been used from Font Awesome version 5. [Font Awesome](https://fontawesome.com/)
+- Google Fonts - for the typeography of the site. [Google Fonts](https://fonts.google.com/)
+- AWS - storage for all images so to keep the site as light as possible. Also where possible all links are CDN. [AWS](https://aws.amazon.com/) 
+- Stripe - Payment integration system. [stripe](https://stripe.com/ie)
+- MailGun - Easy SMTP integration, RESTful API abstracts away the messy details of sending transactional or bulk email. [mailgun](https://www.mailgun.com/)
 
 ### Backend
-SQLite - Database for local hosting and development
-Postgres - Database for remote hosting and production.
-Python - Language used with the Django Framework.
+- SQLite - Database for local hosting and development
+- Postgres - Database for remote hosting and production.
+- Python - Language used with the Django Framework.
 
 ### Hosting
 Heroku - the application has been hosted on heroku [heroku](https://heroku.com)
@@ -127,38 +170,7 @@ Heroku - the application has been hosted on heroku [heroku](https://heroku.com)
 
 ## Testing
 
-Each functionality has been run and tested at each stage of development and any bugs or issues have been dealt with accordingly, before moving on to another step.  
-
-Media queries have been used to ensure CSS is working optimally on all mobile devices.  
-
-Unit testing has been carried out on the site successfully.
-
-[Travis](https://travis-ci.org/) a continuous integration & continuous delivery platform has been integrated on the github page and passes all tests.  See [travis test](https://github.com/jacqueline-walsh/bookit/blob/master/site-resources/docs/Travis_test_passed.png)
-
-
-### manual testing of the registration form:
-
-    1. Go to the "Registration" page [registration](https://bookit-online-book-store.herokuapp.com/accounts/register)
-    2. Try to submit the empty registration form and an alert message pops up on the first name field, "please fill in this field"
-    3. Try to submit the registration form with username of 4 characters and a message pops up, "Please lengthen this text to 6 characters or more (you are currently only using 4 characters)".
-    4. Try to submit an incorrect email with just the name 'julie' and an alert message pops up, "Please include an '@' in the email address, 'julie' is missing an '@'"
-    5. Try to submit the form with all fields correctly completed and the username, "samSmith" and an alert message pops up, "Error username already exists"
-    6. Try to submit the form with all fields correctly completed and the email, "sam@gmail.com" and an alert message pops up, "Error that email already exists"
-    7. Try to submit the form with a password of "pass", and an alert message pops up, "Please lengthen this to 8 characters or more.  (you are currently using 4 characters)" 
-    8. Try to complete the form with mismatch passwords and an alert message pops up, "Error passwords do not match"
-    9. Try to submit the form with all inputs valid and verify that a success message appears.
-
-The site has been intensively user tested to ensure the following:
-
-- all links are fully functioning
-- validation on forms prompting and working correctly
-- registration return error message if username already in database
-- password and password confirm return match if same
-- mobile views are in good design and order
-- user experience has been an enjoyable experience with no frustration of getting lost or confused
-- flash messages appear and are correctly displayed
-- data is being received and stored correctly on the database
-- email confirmation are recieved correctly by both admin and user
+See [TESTING.md](https://github.com/jacqueline-walsh/bookit/blob/master/TESTING.md) file
 
 ## Deployment
 
