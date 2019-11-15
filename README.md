@@ -77,9 +77,10 @@ Each site page has been detailed individually below and all features explained.
 - contact us button for all users.  If user logged in contact form will auto-populate fields such as book title, username and email 
 - an email will be sent to admin to alter them that a new message has been sent.
 
-### Shopping Cart
+### Shopping Cart/Checkout
 
-- only logged in users can access the shopping cart page.  
+- delivery details such as billing and shipping address are all handled via the stripe payment
+- only logged in users can access the shopping cart/checkout page  
 - page is accessed by logged in user when item is added to cart either on topnav bar or when user selects "add to cart" button. 
 - users has various options on this page: 
     - amend item quantity 
@@ -90,11 +91,11 @@ Each site page has been detailed individually below and all features explained.
 
 ### Stripe Pay with Card
 
-- this is where the user can enter:
+- this is where the user can enter their details as follows:
     - email 
-    - billing and shipping details 
+    - billing and shipping address
     - phone number 
-    - check the amount to pay 
+    - double check the amount to pay 
     - enter card details
 
 ### Thank You Page

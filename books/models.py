@@ -22,5 +22,6 @@ class Books(models.Model):
   available = models.BooleanField(default=True)
   updated = models.DateTimeField(auto_now=True)
   
+
   def __str__(self):
     return self.title
