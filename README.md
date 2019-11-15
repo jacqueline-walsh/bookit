@@ -1,6 +1,6 @@
 # BookIt - Ecommerce Site for Books 
 
-<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac-screen.jpg">
+<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/mac_screen.jpg">
 
 [![Build Status](https://travis-ci.org/jacqueline-walsh/bookit.svg?branch=master)](https://travis-ci.org/jacqueline-walsh/bookit)
 
@@ -162,12 +162,11 @@ github - Github has been used throughout the project. At each stage throughout t
 
 ### Backend
 - SQLite - Database for local hosting and development
-- Postgres - Database for remote hosting and production.
-- Python - Language used with the Django Framework.
+- Postgres - Database for remote hosting and production
+- Python - Language used with the Django Framework
 
 ### Hosting
 Heroku - the application has been hosted on heroku [heroku](https://heroku.com)
-
 
 ## Testing
 
