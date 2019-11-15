@@ -47,6 +47,8 @@ The site has been intensively user tested to ensure the following:
 
 Stripe payment has a customized bookit logo at the top of the modal payment form.  However, when images where uploaded to AWS the link to the image was broken.  It wasn't until testing that this was realised an the image link has been amended in order to fix this bug.
 
+<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/bug_and_fix.jpg">
+
 ### Useful resources
 
 [assertion methods](https://docs.python.org/3/library/unittest.html#assert-methods)
