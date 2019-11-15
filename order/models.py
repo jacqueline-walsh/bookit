@@ -17,10 +17,8 @@ class Order(models.Model):
 	shippingPostcode = models.CharField(max_length=10, blank=True)
 	shippingCountry = models.CharField(max_length=200, blank=True)
 
-
 	def __str__(self):
 		return str(self.id)
-
 
 class OrderItem(models.Model):
 	book = models.CharField(max_length=250)

@@ -42,3 +42,8 @@ The site has been intensively user tested to ensure the following:
 
 ### Unit Testing
 
+
+
+### Useful resources
+
+[assertion methods](https://docs.python.org/3/library/unittest.html#assert-methods)
