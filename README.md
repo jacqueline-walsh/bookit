@@ -37,7 +37,7 @@ The user is a first time visitor to the site:
 - User is directed to the thank you page with their order number.
 - User receives an email, giving details of the order purchased.
 
-<img class="text-center" src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/email_order_confirmation.png">
+<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/email_order_confirmation.png">
 
 ## Features
 
