@@ -11,7 +11,7 @@ Media queries have been used to ensure CSS is working optimally on all mobile de
 
 Python Unit testing has been run on the site successfully.
 
-Pylint has been installed on Visual Studio Code Editor which validates python code.
+[Pylint](https://pypi.org/project/pylint/) has been installed on Visual Studio Code Editor which validates python code.
 
 [Travis](https://travis-ci.org/) a continuous integration & continuous delivery platform has been integrated on the github page and passes all tests.
 
@@ -39,4 +39,6 @@ The site has been intensively user tested to ensure the following:
 - flash messages appear and are correctly displayed
 - data is being received and stored correctly on the database
 - email confirmation are recieved correctly by both admin and user
+
+### Unit Testing
 
