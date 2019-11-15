@@ -136,6 +136,8 @@ Each site page has been detailed individually below and all features explained.
 - select if the book is available 
 - customized dashboard to match with the site theme
 
+<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/admin-dashboard.png">
+
 ### Features Left to Implement
 
 - Another feature ideas would be to implement book reviews / recommendations.  A members readers club with chat forum.
