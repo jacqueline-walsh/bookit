@@ -136,7 +136,7 @@ Each site page has been detailed individually below and all features explained.
 - select if the book is available 
 - customized dashboard to match with the site theme
 
-<img class="text-center" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/admin-dashboard.png">
+<img class="text-center" src="https://bookit-uploads.s3-eu-west-1.amazonaws.com/img/admin-dashboard.png">
 
 ### Features Left to Implement
 
