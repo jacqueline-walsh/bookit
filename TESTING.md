@@ -43,6 +43,9 @@ The site has been intensively user tested to ensure the following:
 ### Unit Testing
 
 
+### Bugs and Fixes
+
+Stripe payment has a customized bookit logo at the top of the modal payment form.  However, when images where uploaded to AWS the link to the image was broken.  It wasn't until testing that this was realised an the image link has been amended in order to fix this bug.
 
 ### Useful resources
 
