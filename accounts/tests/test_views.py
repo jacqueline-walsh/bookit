@@ -48,3 +48,4 @@ from accounts.views import register, login, logout, profile
     #       response = self.client.get('/accounts/profile')
     #       self.assertEqual(response.status_code, 200)
     #       self.assertTemplateUsed(response, 'accounts/profile.html')
+    
