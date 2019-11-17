@@ -5,12 +5,12 @@ from accounts.views import register, login, logout, profile
 
 
 # Create your tests here.
-class TestLoginViews(TestCase):
+# class TestLoginViews(TestCase):
 
-    def test_get_login_page(self):
-        response = self.client.get('/accounts/login/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'accounts/login.html')
+    # def test_get_login_page(self):
+    #     response = self.client.get('/accounts/login/')
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertTemplateUsed(response, 'accounts/login.html', form)
 
     # def test_can_log_in(self):
     #     user1 = User.objects.create_user(
@@ -28,25 +28,23 @@ class TestLoginViews(TestCase):
 
     #     response = self.client.get('/accounts/login')
 
-
-# class TestLogoutView(TestCase):
+    # class TestLogoutView(TestCase):
 
     # def test_logout_form(self):
     #     response = self.client.get("/accounts/logout")
     #     self.assertRedirects(response, '/')
 
-
-# class TestRegisterView(TestCase):
+    # class TestRegisterView(TestCase):
 
     # def test_get_register_page(self):
     #     response = self.client.get('/accounts/register')
     #     self.assertEqual(response.status_code, 200)
     #     self.assertTemplateUsed(response, 'accounts/register.html')
 
+    # class TestProfileView(TestCase):
 
-# class TestProfileView(TestCase):
-#     def testLogin_get_profile_page(self):
-#       self.client.login(username='john', password='johnpassword')
-#       response = self.client.get('/accounts/profile')
-#       self.assertEqual(response.status_code, 200)
-#       self.assertTemplateUsed(response, 'accounts/profile.html')
+    #     def testLogin_get_profile_page(self):
+    #       self.client.login(username='john', password='johnpassword')
+    #       response = self.client.get('/accounts/profile')
+    #       self.assertEqual(response.status_code, 200)
+    #       self.assertTemplateUsed(response, 'accounts/profile.html')

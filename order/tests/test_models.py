@@ -50,3 +50,6 @@ class TestOrderItemModel(TestCase):
         sub_total.save()
         self.assertEqual(sub_total.quantity * sub_total.price, 19.98)
 
+    def test_string_representation(self):
+        book_title = OrderItem(book="Test book title")
+        self.assertEqual(str(book_title), book_title.book)
