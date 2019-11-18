@@ -42,12 +42,13 @@ The site has been intensively user tested to ensure the following:
 
 ### Unit Testing
 
-Unit testing has been carried out in order by seperation of concerns, test_urls.py, test_views.py, test_models.py and test_forms.py for each applicable component.  However, this is a new concept for the tester and future learning and research could improve this testing exercise going forward.
+Unit testing has been carried out in order by seperation of concerns, test_urls.py, test_views.py, test_models.py and test_forms.py for each applicable component, a total of 43 tests.  However, this is a new concept for the tester and future learning and research could improve this testing exercise going forward.
 
-An overall coverage report was run on the testing with a final score of    .  To run a coverage report the following needs to be run in the terminal:
-`pip install coverage`
-`coverage run manage.py test`
-`coverage html`
+To run a coverage report for the unit tests, the following needs to be installed and run in the terminal:
+
+- `pip install coverage`
+- `coverage run manage.py test`
+- `coverage html`
 
 - NOTE running `coverage html` will produce a folder in the root director named, htmlcov inside this folder look for the index.html and open this in the browser.  This provides an indepth detail of all tests and gives the tester, insight on what code still needs further testing.
 
@@ -60,4 +61,4 @@ Stripe payment has a customized bookit logo at the top of the modal payment form
 ### Useful resources
 
 [assertion methods](https://docs.python.org/3/library/unittest.html#assert-methods)
-[]
+
