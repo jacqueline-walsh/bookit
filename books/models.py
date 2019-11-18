@@ -10,7 +10,7 @@ class Books(models.Model):
   description = models.TextField()
   price = models.DecimalField(max_digits=5, decimal_places=2 )
   category_name = models.CharField(max_length=200)
-  photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/')
+  photo_main = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
   photo_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
   photo_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
   photo_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)

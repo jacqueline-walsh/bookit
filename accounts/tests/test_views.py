@@ -50,4 +50,5 @@ class TestProfileView(TestCase):
         self.client.login(username='john', password='johnpassword')
         response = self.client.get('/accounts/profile/')
         self.assertEqual(response.status_code, 302)
- 
+
+
