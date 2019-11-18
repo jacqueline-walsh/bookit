@@ -44,10 +44,10 @@ class TestRegisterView(TestCase):
         self.assertTemplateUsed(response, 'accounts/register.html')
 
 
-# class TestProfileView(TestCase):
+class TestProfileView(TestCase):
 
-#     def testLogin_get_profile_page(self):
-#         self.client.login(username='john', password='johnpassword')
-#         response = self.client.get('/accounts/profile/')
-#         self.assertEqual(response.status_code, 200)
-#         self.assertTemplateUsed(response, 'accounts/profile.html')
+    def testLogin_get_profile_page(self):
+        self.client.login(username='john', password='johnpassword')
+        response = self.client.get('/accounts/profile/')
+        self.assertEqual(response.status_code, 302)
+ 
