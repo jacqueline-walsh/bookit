@@ -125,6 +125,10 @@ Each site page has been detailed individually below and all features explained.
 - a link for user to change password  
 - order history details with link to invidual orders
 
+### 404 and 500 Error Pages
+
+- should things go wrong there is a 404 and a 500 page so the user can redirect back to home page gracefully
+
 ### Admin Dashboard
 
 - available only to the administrator of the site  

@@ -17,3 +17,6 @@ def about(request):
 
 def view_404(request, exception):
   return render(request, 'pages/404.html')
+
+def view_500(request):
+  return render(request, 'pages/500.html')

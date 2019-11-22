@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} | 500 Page {% endblock %}
+{% block content %}
+<div class="container-500">
+  <h1 class="text-center pt-5">OOPS! So sorry this is us, not you</h1><br/>
+  <div class="text-center">
+    <a href="{% url 'index' %}"<button class="btn btn-custom btn-large mb-5">Take Me Home</button></a><br/>
+  </div>
+  <div class="text-center">
+    <img class="img-500 mt-5 img-fluid" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/500-HTTP-Error.png" alt="500 server error">
+  </div>  
+</div>
+{% endblock %}
