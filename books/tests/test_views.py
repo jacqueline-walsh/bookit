@@ -22,11 +22,7 @@ class TestAccountsViews(TestCase):
 
         response = self.client.get("/books/book/1")
         self.assertEqual(response.status_code, 200)
-
-
-    def test_get_book_page_for_book_that_does_not_exist(self):
-        response = self.client.get("/books/book/0")
-        self.assertEqual(response.status_code, 404)
+    
 
     def test_get_search_page(self):
         response = self.client.get('/books/search')
