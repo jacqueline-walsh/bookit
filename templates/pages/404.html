@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block title %} | 404 Page {% endblock %}
+{% block content %}
+<div class="container-404">
+  <h1 class="text-center pt-5">OOPS! You seem to be a little lost!</h1><br/>
+  <div class="text-center">
+    <a href="{% url 'index' %}"<button class="btn btn-custom btn-large mb-5">Take Me Home</button></a><br/>
+  </div>
+  <div class="text-center">
+    <img class="img-404 mt-5 img-fluid" src="https://code-institute.s3-eu-west-1.amazonaws.com/BookIt/pikabu-error-404-large.gif" alt="404 Page Not Found">
+  </div>  
+</div>
+{% endblock %}

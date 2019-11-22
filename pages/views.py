@@ -15,3 +15,5 @@ def about(request):
   context = {'authors' : authors, 'is_author_of_month': is_author_of_month }
   return render(request, 'pages/about.html', context)
 
+def view_404(request, exception):
+  return render(request, 'pages/404.html')

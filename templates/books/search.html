@@ -2,7 +2,8 @@
 {% block title %} | Search {% endblock %}
 {% block content %}
 <div class="container mt-4">
-  <h3 class="mt-4">All Books</h3>
+  <h3>Search Page</h3>
+  <a href="{% url 'books' %}" class="mt-4 btn btn-custom btn-sm">reset to all books</a>
   <div class="card p-4 mt-4 mb-4 search-card">
     <h4 class="text-center">Search</h4>
     <form action="{% url 'search' %}" form-group>
@@ -41,6 +42,7 @@
           <a href="{% url 'book' book.id %}" ><img class="card-img-top" src="{{ book.photo_main.url }}" alt="{{ book.title }} cover"></a>
           <h5>{{ book.title }}</h3>
             <p>{{ book.author }}</p>
+            <p>€{{ book.price }}</p>
             <a href="{% url 'book' book.id %}" class="btn btn-custom btn-sm mb-4">More Info</a>
         </div>
       </div>
